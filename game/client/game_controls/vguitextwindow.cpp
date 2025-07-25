@@ -169,7 +169,7 @@ void CTextWindow::ShowURL( const char *URL, bool bAllowUserToDisable )
 	ClientModeShared *mode = ( ClientModeShared * )GetClientModeNormal();
 	if ( ( bAllowUserToDisable && cl_disablehtmlmotd.GetBool() ) || !mode->IsHTMLInfoPanelAllowed() )
 	{
-		Warning( "Blocking HTML info panel '%s'; Using plaintext instead.\n", URL );
+		// Warning( "Blocking HTML info panel '%s'; Using plaintext instead.\n", URL );
 
 		// User has disabled HTML TextWindows. Show the fallback as text only.
 		if ( g_pStringTableInfoPanel )

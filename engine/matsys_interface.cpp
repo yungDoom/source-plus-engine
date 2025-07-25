@@ -1751,11 +1751,11 @@ static inline bool CheckMSurfaceBaseTexture2( worldbrushdata_t *pBrushData, Surf
 				vCenter /= (float)MSurf_VertCount( surfID );
 				
 				// Spit out the warning.				
-				Warning( "Warning: using WorldTwoTextureBlend on a non-displacement surface.\n"
-						 "Support for this will go away soon.\n"
-						 "   - Material       : %s\n"
-						 "   - Surface center : %d %d %d\n"
-						 , pMaterialName, (int)vCenter.x, (int)vCenter.y, (int)vCenter.z );
+				//Warning( "Warning: using WorldTwoTextureBlend on a non-displacement surface.\n"
+				//		 "Support for this will go away soon.\n"
+				//		 "   - Material       : %s\n"
+				//		 "   - Surface center : %d %d %d\n"
+				//		 , pMaterialName, (int)vCenter.x, (int)vCenter.y, (int)vCenter.z );
 			}
 		}
 		return true;
@@ -1841,7 +1841,7 @@ void BuildMSurfaceVertexArrays( worldbrushdata_t *pBrushData, SurfaceHandle_t su
 			{
 				const char *pMaterialName = MSurf_TexInfo( surfID )->material->GetName();
 				bWarned = true;
-				Warning( "Warning: WorldTwoTextureBlend found on a non-displacement surface (material: %s). This wastes perf for no benefit.\n", pMaterialName );
+				//Warning( "Warning: WorldTwoTextureBlend found on a non-displacement surface (material: %s). This wastes perf for no benefit.\n", pMaterialName );
 			}
 
 			builder.Color4ub( 255, 255, 255, 0 );
