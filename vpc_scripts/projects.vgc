@@ -359,16 +359,6 @@ $Project "glview"
 	"utils\glview\glview.vpc" [$WIN32]
 }
 
-$Project "hammer_dll"
-{
-	"hammer\hammer_dll.vpc" [$WIN32]
-}
-
-$Project "hammer_launcher"
-{
-	"hammer_launcher\hammer_launcher.vpc" [$WIN32]
-}
-
 $Project "havana_constraints"
 {
 	"ivp\havana\havana_constraints.vpc" [$WINDOWS||$X360||$POSIX]
@@ -1205,11 +1195,6 @@ $Project "valvelib"
 	"utils\valvelib\valvelib.vpc" [$WIN32]
 }
 
-$Project "video_services"
-{
-	"video\video_services.vpc" [$WINDOWS||$X360||$POSIX]
-}
-
 $Project "vaudio_miles"
 {
 //	"engine\voice_codecs\miles\vaudio_miles.vpc" [$WINDOWS||$POSIX]
@@ -1258,21 +1243,6 @@ $Project "vconfig"
 $Project "vcrtrace"
 {
 	"utils\vcrtrace\vcrtrace.vpc" [$WIN32]
-}
-
-$Project "video_bink"
-{
-//	"video\video_bink.vpc" [($WINDOWS||$LINUX)]
-}
-
-$Project "video_quicktime"
-{
-	"video\video_quicktime.vpc" [$WINDOWS||$OSXALL]
-}
-
-$Project "video_webm"
-{
-	"video\video_webm.vpc" [$LINUX]
 }
 
 $Project "vguimatsurface"

@@ -91,7 +91,8 @@ int MessageBox( HWND hWnd, const char *message, const char *header, unsigned uTy
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
 
-#define DEFAULT_HL2_GAMEDIR	"hl2"
+// This is where u set the default game directory.
+#define DEFAULT_HL2_GAMEDIR	"hl2mp"
 
 #if defined( USE_SDL )
 extern void* CreateSDLMgr();
@@ -675,7 +676,7 @@ bool CSourceAppSystemGroup::Create()
 		{ "datacache" DLL_EXT_STRING,		STUDIO_DATA_CACHE_INTERFACE_VERSION },
 		{ "studiorender" DLL_EXT_STRING,	STUDIO_RENDER_INTERFACE_VERSION },
 		{ "vphysics" DLL_EXT_STRING,		VPHYSICS_INTERFACE_VERSION },
-		{ "video_services" DLL_EXT_STRING,  VIDEO_SERVICES_INTERFACE_VERSION },
+//		{ "video_services" DLL_EXT_STRING,  VIDEO_SERVICES_INTERFACE_VERSION },
   
 		// NOTE: This has to occur before vgui2.dll so it replaces vgui2's surface implementation
 		{ "vguimatsurface" DLL_EXT_STRING,	VGUI_SURFACE_INTERFACE_VERSION },

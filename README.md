@@ -1,48 +1,57 @@
-# Source Engine
-[![GitHub Actions Status](https://github.com/nillerusr/source-engine/actions/workflows/build.yml/badge.svg)](https://github.com/nillerusr/source-engine/actions/workflows/build.yml) [![GitHub Actions Status](https://github.com/nillerusr/source-engine/actions/workflows/tests.yml/badge.svg)](https://github.com/nillerusr/source-engine/actions/workflows/tests.yml)
- Discord: [![Discord Server](https://img.shields.io/discord/672055862608658432.svg)](https://discord.gg/hZRB7WMgGw)
- 
+<img width="1500" height="517" alt="image" src="https://github.com/user-attachments/assets/fc7abead-a260-492e-a245-b86a9839c3d4" />
 
-Information from [wikipedia](https://wikipedia.org/wiki/Source_(game_engine)):
+<h1 align="center">Source (+) Engine</h1>
 
-Source is a 3D game engine developed by Valve.
-It debuted as the successor to GoldSrc with Half-Life: Source in June 2004,
-followed by Counter-Strike: Source and Half-Life 2 later that year.
-Source does not have a concise version numbering scheme; instead, it was released in incremental versions
+<p align="center"> This project is using waf buildsystem. If you have waf-related questions look https://waf.io/book</p>
 
-Source code is based on TF2 2018 leak. Don't use it for commercial purposes.
+<h2 align="center"> How to Build </h2>
 
-This project is using waf buildsystem. If you have waf-related questions look https://waf.io/book
+<h4 align="center"> Windows </h4>
 
-# Features:
-- Android, OSX, FreeBSD, Windows, Linux( glibc, musl ) support
-- Arm support( except windows )
-- 64bit support
-- Modern toolchains support
-- Fixed many undefined behaviours
-- Touch support( even on windows/linux/osx )
-- VTF 7.5 support
-- PBR support
-- bsp v19-v21 support( bsp v21 support is partial, portal 2 and csgo maps works fine )
-- mdl v46-49 support
-- Removed useless/unnecessary dependencies
-- Achivement system working without steam
-- Fixed many bugs
-- Serverbrowser works without steam
+```
+.\waf.bat configure --disable-warns
+.\waf.bat build -p
+.\waf.bat install
+```
 
-# Current tasks
-- Rewrite materialsystem for OpenGL render
-- dxvk-native support
-- Elbrus port
-- Bink audio support( for video_bink )
+<h4 align="center"> Linux </h4>
 
-# How to Build?
-- [Building instructions(EN)](https://github.com/nillerusr/source-engine/wiki/Source-Engine-(EN))
-- [Building instructions(RU)](https://github.com/nillerusr/source-engine/wiki/Source-Engine-(RU))
+```
+./waf configure --disable-warns
+./waf build -p
+./waf install
+```
 
-# Support me
-BTC: `bc1qnjq92jj9uqjtafcx2zvnwd48q89hgtd6w8a6na`
+### Knowledgements
 
-ETH: `0x5d0D561146Ed758D266E59B56e85Af0b03ABAF46`
+**[Follow the original guide for the packages etc.](https://github.com/nillerusr/source-engine/wiki)**
 
-XMR: `48iXvX61MU24m5VGc77rXQYKmoww3dZh6hn7mEwDaLVTfGhyBKq2teoPpeBq6xvqj4itsGh6EzNTzBty6ZDDevApCFNpsJ`
+If your game is crashing add `-dxlevel 90` parameter while launching the game. 
+   - (you can delete the parameter and launch the game normally after you booted with this argument)
+
+Make sure to use `steam_legacy` branch of every supported source games to get the files.<br>
+Having black screen on HL2:DM or any other game? [Download the fix](https://mega.nz/file/bzY2XLrA#1GsxVHTS39Jfk7LanJOou7E_2XK3QADpmDwP7ajMC0Y)<br>
+I will not cover how to setup your game files, its pretty straight forward.
+
+#### Flags
+
+**Make sure to use them while configuring and not building.**
+
+``--32bits`` = This flag allows you to build every component as 32-bit<br>
+``-T debug`` or ``-T release`` = Switch between debug or release depending which flag u choose<br>
+``--prefix=`` and ``--build-games=`` = You can choose which game you want to build, here are the examples:
+
+```
+hl1 = Half-Life 1: Source
+hl2 = Half-Life 2 -- Default Option if you dont provide both of those flags.
+episodic = Half-Life 2 Episode 1 or Episode 2
+hl2mp = Half-Life 2: Deathmatch
+dod = Day of Defeat
+cstrike = Counter-Strike: Source
+portal = Portal
+```
+
+``--enable-opus`` = Enables Voice-Chatting features.
+``-d`` = Dedicated Server
+
+**EXAMPLE:** `./waf.bat configure -T release --prefix=hl2mp --build-games=hl2mp --disable-warns --enable-opus`

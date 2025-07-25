@@ -724,9 +724,9 @@ void CMatSystemTexture::SetMaterial( const char *pFileName )
 	{
 		if (IsOSX())
 		{
-			printf( "\n ##### Missing Vgui material %s\n", pFileName );
+		//	printf( "\n ##### Missing Vgui material %s\n", pFileName );
 		}
-		Msg( "--- Missing Vgui material %s\n", pFileName );
+		// Msg( "--- Missing Vgui material %s\n", pFileName );
 	}
 
 	SetMaterial( pMaterial );

@@ -362,8 +362,8 @@ void CCvar::RegisterConCommand( ConCommandBase *variable )
 					{
 						if ( Q_stricmp( pParentVar->m_pszHelpString, pChildVar->m_pszHelpString ) != 0 )
 						{
-							Warning( "Convar %s has multiple help strings:\n\tparent (wins): \"%s\"\n\tchild: \"%s\"\n", 
-								variable->GetName(), pParentVar->m_pszHelpString, pChildVar->m_pszHelpString );
+							//Warning( "Convar %s has multiple help strings:\n\tparent (wins): \"%s\"\n\tchild: \"%s\"\n", 
+						    //variable->GetName(), pParentVar->m_pszHelpString, pChildVar->m_pszHelpString );
 						}
 					}
 					else

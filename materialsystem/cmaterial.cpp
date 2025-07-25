@@ -1487,7 +1487,7 @@ KeyValues* CMaterial::InitializeShader( KeyValues &keyValues, KeyValues &patchKe
 		{
 			if ( g_pShaderDevice->IsUsingGraphics() )
 			{
-				Warning( "Error: Material \"%s\" uses unknown shader \"%s\"\n", GetName(), pShaderName );
+				//Warning( "Error: Material \"%s\" uses unknown shader \"%s\"\n", GetName(), pShaderName );
 				//hushed Assert( 0 );
 			}
 
