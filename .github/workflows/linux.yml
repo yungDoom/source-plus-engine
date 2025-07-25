@@ -1,5 +1,5 @@
 #2023更新
-name: linux-build
+name: Linux Build
 
 on:
   push:

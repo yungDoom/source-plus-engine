@@ -112,7 +112,7 @@ stages:
       tests: ''
     timeoutInMinutes: 120
     pool:
-      vmImage: 'windows-2019'
+      vmImage: 'windows-2025'
     strategy:
       matrix:
         msys2_mingw32_debug_openssl:
