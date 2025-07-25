@@ -23,7 +23,6 @@ Release_*/
 *.bin
 *.vcxproj*
 *.sln
-*.dll*
 *.exp
 *.ilk
 ValveETWProviderEvents.h
@@ -39,4 +38,5 @@ waf3*/
 source-engine.sln
 deprecated/
 /hl2mp/
+!/hl2mp/
 hl2/
