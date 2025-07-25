@@ -65,3 +65,7 @@ voice_ban.dt
 *.vdf
 *.ain
 *.lst
+*.tmp
+*_temp.html
+*.dat
+*.vmt
