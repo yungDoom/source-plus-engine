@@ -65,9 +65,8 @@ Follow the Linux build instructions.
 
 ```
 hl1 = Half-Life 1: Source
-hl2 = Half-Life 2 -- Default Option if you dont provide both of those flags.
+hl2 = Half-Life 2 // Default when no flag provided.
 episodic = Half-Life 2 Episode 1 or Episode 2
-hl2mp = Half-Life 2: Deathmatch
 dod = Day of Defeat
 cstrike = Counter-Strike: Source
 portal = Portal
