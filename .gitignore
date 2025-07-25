@@ -58,3 +58,10 @@ hl2mp/bin/
 hl2mp/hl2mp/bin/
 hl2mp/hl2/*.vpk
 *.vpk.sound.cache
+*.cache
+stats.txt
+steam_appid.txt
+voice_ban.dt
+*.vdf
+*.ain
+*.lst
