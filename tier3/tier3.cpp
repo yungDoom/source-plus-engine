@@ -110,7 +110,7 @@ void ConnectTier3Libraries( CreateInterfaceFn *pFactoryList, int nFactoryCount )
 		}
 		if ( !g_pVideo )
 		{
-		//	g_pVideo = (IVideoServices *)pFactoryList[i](VIDEO_SERVICES_INTERFACE_VERSION, NULL);
+			g_pVideo = (IVideoServices *)pFactoryList[i](VIDEO_SERVICES_INTERFACE_VERSION, NULL);
 		}
 		if ( !g_pDmeMakefileUtils )
 		{
