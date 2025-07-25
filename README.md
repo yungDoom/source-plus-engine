@@ -49,13 +49,13 @@ Follow the Linux build instructions.
 - Add to WAF args `--togles --android=armeabi-v7a-hard,host,21`. `armeabi-v7a-hard` can be replaced with `aarch64` for arm64 build, but you need to add `-8` or `--64bits` argument
 
 
-### Knowledgements
+<h2 align="center"> Knowledgements </h2>
 
 Make sure to use `steam_legacy` branch of every supported source games to get the files.<br>
 Having black screen on HL2:DM or any other game? [Download the fix](https://mega.nz/file/bzY2XLrA#1GsxVHTS39Jfk7LanJOou7E_2XK3QADpmDwP7ajMC0Y)<br>
 I will not cover how to setup your game files, its pretty straight forward.
 
-#### Flags
+<h4 align="center"> Flags </h4>
 
 **Make sure to use them while configuring and not building.**
 
