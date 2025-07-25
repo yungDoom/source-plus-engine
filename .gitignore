@@ -1,19 +1,16 @@
+# Build system & project files
 *.mak
 *.mak.vpc_crc
 *.vpc_crc
 *.vpc.*
 *.project
+*.vcxproj*
+*.sln
+source-engine.sln
+.depproj/
+
+# Build output & intermediate files
 *obj_*
-.waf*
-.lock-waf*
-__pycache__
-*.pyc
-.vs/
-Debug/
-Debug_*/
-Release/
-Release_*/
-*.tlog/
 *.obj
 *.pch
 *.log
@@ -21,22 +18,39 @@ Release_*/
 *.pdb
 *.rc
 *.bin
-*.vcxproj*
-*.sln
 *.exp
 *.ilk
-ValveETWProviderEvents.h
-game/client/*/client.lib
-game/server/*/server.lib
-.DS_Store
+*.tlog/
+Debug/
+Debug_*/
+Release/
+Release_*/
 build*/
 .cache/
 .ccache/
 waf3*/
+
+# Waf build system
+.waf*
+.lock-waf*
+
+# IDE & editor files
+.vs/
 .vscode/
-.depproj/
-source-engine.sln
+
+# Python artifacts
+__pycache__/
+*.pyc
+
+# Platform-specific/system files
+.DS_Store
+
+# Game/engine-specific files
+ValveETWProviderEvents.h
+game/client/*/client.lib
+game/server/*/server.lib
 deprecated/
-/hl2mp/
-!/hl2mp/
-hl2/
+
+# Mod/custom content
+hl2mp/hl2/*.vpk
+*.vpk.sound.cache
