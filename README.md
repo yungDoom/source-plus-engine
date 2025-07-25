@@ -6,7 +6,7 @@
 
 *You may need* **Git** *in order to clone the repository since it includes submodules:*
 
-``git clone --recursive https://github.com/yungDoom/source-plus-engine``<br>
+With HTTPS: ``git clone --recursive https://github.com/yungDoom/source-plus-engine``<br>
 Or with SSH **(Recommended)**: ``git clone --recurse-submodules git@github.com:yungDoom/source-plus-engine.git``
 
 <h4 align="center"> Windows </h4>
