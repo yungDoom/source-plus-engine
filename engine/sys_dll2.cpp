@@ -128,7 +128,8 @@ const SteamInfVersionInfo_t& GetSteamInfIDVersionInfo()
 
 int build_number( void )
 {
-	return GetSteamInfIDVersionInfo().ServerVersion;
+	// return GetSteamInfIDVersionInfo().ServerVersion;
+	return 2000;
 }
 
 //-----------------------------------------------------------------------------
