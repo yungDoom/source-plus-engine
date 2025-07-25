@@ -359,11 +359,6 @@ $Project "glview"
 	"utils\glview\glview.vpc" [$WIN32]
 }
 
-$Project "havana_constraints"
-{
-	"ivp\havana\havana_constraints.vpc" [$WINDOWS||$X360||$POSIX]
-}
-
 $Project "height2normal"
 {
 	"utils\height2normal\height2normal.vpc" [$WIN32]
@@ -372,16 +367,6 @@ $Project "height2normal"
 $Project "height2ssbump"
 {
 	"utils\height2ssbump\height2ssbump.vpc" [$WIN32]
-}
-
-$Project "hk_base"
-{
-	"ivp\havana\havok\hk_base\hk_base.vpc" [$WINDOWS||$X360||$POSIX]
-}
-
-$Project "hk_math"
-{
-	"ivp\havana\havok\hk_math\hk_math.vpc" [$WINDOWS||$X360||$POSIX]
 }
 
 // FIXME why doesn't source2 define this?
@@ -474,11 +459,6 @@ $Project "inputtest"
 	"unittests\inputtest\inputtest.vpc" [$WIN32]
 }
 
-$Project "ivp_compactbuilder"
-{
-	"ivp\ivp_compact_builder\ivp_compactbuilder.vpc" [$WINDOWS||$X360||$POSIX]
-}
-
 $Project "itemtest_com"
 {
 //	"utils\itemtest\itemtest_com.vpc"
@@ -492,11 +472,6 @@ $Project "itemtest_controls"
 $Project "itemtest_lib"
 {
 //	"utils\itemtest_lib\itemtest_lib.vpc"
-}
-
-$Project "ivp_physics"
-{
-	"ivp\ivp_physics\ivp_physics.vpc" [$WINDOWS||$X360||$POSIX]
 }
 
 $Project "jpeglib"
