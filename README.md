@@ -14,7 +14,8 @@
 
 <h4 align="center"> Linux </h4>
 
-*The List of needed packages:* libopenal-dev g++-multilib gcc-multilib libpng-dev libjpeg-dev libfreetype6-dev libfontconfig1-dev libcurl4-gnutls-dev libsdl2-dev zlib1g-dev libbz2-dev libedit-dev<br>
+*The List of needed packages:*
+``libopenal-dev g++-multilib gcc-multilib libpng-dev libjpeg-dev libfreetype6-dev libfontconfig1-dev libcurl4-gnutls-dev libsdl2-dev zlib1g-dev libbz2-dev libedit-dev``<br>
 **Find the matching ones for your distro.**
 
 ```
