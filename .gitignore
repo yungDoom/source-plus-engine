@@ -57,6 +57,7 @@ hl2mp/dedicated_launcher.exe
 hl2mp/bin/
 hl2mp/hl2mp/bin/
 hl2mp/hl2/*.vpk
+hl2mp/hl2mp/cfg/config.cfg
 *.vpk.sound.cache
 *.cache
 stats.txt
@@ -69,3 +70,4 @@ voice_ban.dt
 *_temp.html
 *.dat
 *.vmt
+
