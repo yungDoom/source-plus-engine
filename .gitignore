@@ -52,5 +52,9 @@ game/server/*/server.lib
 deprecated/
 
 # Mod/custom content
+hl2mp/hl2_launcher.exe
+hl2mp/dedicated_launcher.exe
+hl2mp/bin/
+hl2mp/hl2mp/bin/
 hl2mp/hl2/*.vpk
 *.vpk.sound.cache
