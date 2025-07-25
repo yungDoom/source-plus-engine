@@ -12,7 +12,7 @@ Or with SSH **(Recommended)**: ``git clone --recurse-submodules git@github.com:y
 <h4 align="center"> Windows </h4>
 
 ```
-.\waf.bat configure --disable-warns
+.\waf.bat configure -T release --prefix=hl2mp --build-games=hl2mp --disable-warns --enable-opus
 .\waf.bat build -p
 .\waf.bat install
 ```
@@ -24,7 +24,7 @@ Or with SSH **(Recommended)**: ``git clone --recurse-submodules git@github.com:y
 **Find the matching ones for your distro.**
 
 ```
-./waf configure --disable-warns
+./waf configure -T release --prefix=hl2mp --build-games=hl2mp --disable-warns --enable-opus
 ./waf build -p
 ./waf install
 ```
@@ -54,17 +54,13 @@ Follow the Linux build instructions.
 - Run `export ANDROID_NDK_HOME="PATH/TO/NDK/android-ndk-r10e"` and `export PATH="PATH/TO/CLANG/bin:$PATH"` or `export PATH="/usr/lib/llvm-11/bin:$PATH"` if you're use llvm.sh script.
 - Add to WAF args `--togles --android=armeabi-v7a-hard,host,21`. `armeabi-v7a-hard` can be replaced with `aarch64` for arm64 build, but you need to add `-8` or `--64bits` argument.
 
-
-<h2 align="center"> Knowledgements </h2>
-
-Make sure to use `steam_legacy` branch of every supported source games to get the files.
-
-<h4 align="center"> Flags </h4>
+<h2 align="center"> Flags </h2>
 
 **Make sure to use them while configuring and not building.**
 
-``--32bits`` = This flag allows you to build every component as 32-bit<br>
-``-T debug`` or ``-T release`` = Switch between debug or release depending which flag u choose<br>
+``--32bits`` = This flag allows you to build every component as 32-bits<br>
+``-T debug`` = Build in Debug Mode<br>
+``-d`` = Dedicated Server<br>
 ``--prefix=`` and ``--build-games=`` = You can choose which game you want to build, here are the examples:
 
 ```
@@ -77,7 +73,9 @@ cstrike = Counter-Strike: Source
 portal = Portal
 ```
 
-``--enable-opus`` = Enables Voice-Chatting features.
-``-d`` = Dedicated Server
+<h3 align="center"> Build Flags </h3>
 
-**e.g:** `./waf | .\waf.bat configure -T release --prefix=hl2mp --build-games=hl2mp --disable-warns --enable-opus`
+
+**Make sure to use them while building and not configuring.**
+
+``-v`` = Verbose
