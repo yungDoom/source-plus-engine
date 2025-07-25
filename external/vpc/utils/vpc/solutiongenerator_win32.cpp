@@ -123,8 +123,6 @@ public:
 		{
 			fprintf(fp, "\xef\xbb\xbf\nMicrosoft Visual Studio Solution File, Format Version 12.00\n");
 			fprintf(fp, "# Visual Studio Version 17\n");
-			fprintf(fp, "VisualStudioVersion = 17.0.31903.59\n");
-			fprintf(fp, "MinimumVisualStudioVersion = 10.0.40219.1\n");
 		}
 		else if ( g_pVPC->Is2019() )
 		{
