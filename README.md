@@ -54,4 +54,4 @@ portal = Portal
 ``--enable-opus`` = Enables Voice-Chatting features.
 ``-d`` = Dedicated Server
 
-**EXAMPLE:** `./waf.bat configure -T release --prefix=hl2mp --build-games=hl2mp --disable-warns --enable-opus`
+**e.g:** `./waf | .\waf.bat configure -T release --prefix=hl2mp --build-games=hl2mp --disable-warns --enable-opus`
