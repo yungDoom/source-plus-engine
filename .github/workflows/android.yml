@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Cloning modlaucher repo and preparing for building 
       run: |
         git clone https://github.com/yungDoom/modlauncher-waf -b lmod
@@ -29,7 +29,7 @@ jobs:
          mv modlauncher-waf/build/android/mod-signed.apk lmod-release.apk
 
     - name: 'Upload Artifact'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: lmod-apk
         path: lmod-release.apk
@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Build Windows (32+64 bit)
       run: |
         
@@ -61,7 +61,7 @@ jobs:
          mv modlauncher-waf/build/android/mod-signed.apk hl2mp-release.apk
 
     - name: 'Upload Artifact'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: hl2mp-apk
         path: hl2mp-release.apk
@@ -70,7 +70,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Build Windows (64 bit)
       run: |
         #
@@ -82,7 +82,7 @@ jobs:
 
 
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: hl2-win-amd64
         path: ./win
