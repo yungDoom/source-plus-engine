@@ -256,7 +256,7 @@ def define_platform(conf):
 			'NO_HOOK_MALLOC',
 			'_DLL_EXT=.dylib'
 		])
-        conf.env.append_unique('INCLUDES', [
+		conf.env.append_unique('INCLUDES', [
 			'/opt/local/include'
 		])
 		conf.env.append_unique('LINKFLAGS', [
