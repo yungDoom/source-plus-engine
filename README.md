@@ -14,6 +14,8 @@
 
 <h4 align="center"> Linux </h4>
 
+
+
 ```
 ./waf configure --disable-warns
 ./waf build -p
@@ -21,11 +23,6 @@
 ```
 
 ### Knowledgements
-
-**[Follow the original guide for the packages etc.](https://github.com/nillerusr/source-engine/wiki)**
-
-If your game is crashing add `-dxlevel 90` parameter while launching the game. 
-   - (you can delete the parameter and launch the game normally after you booted with this argument)
 
 Make sure to use `steam_legacy` branch of every supported source games to get the files.<br>
 Having black screen on HL2:DM or any other game? [Download the fix](https://mega.nz/file/bzY2XLrA#1GsxVHTS39Jfk7LanJOou7E_2XK3QADpmDwP7ajMC0Y)<br>
