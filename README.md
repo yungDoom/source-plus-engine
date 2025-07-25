@@ -1,5 +1,3 @@
-<img width="1500" height="517" alt="image" src="https://github.com/user-attachments/assets/fc7abead-a260-492e-a245-b86a9839c3d4" />
-
 <h1 align="center">Source (+) Engine</h1>
 
 <p align="center"> This project is using waf buildsystem. If you have waf-related questions look https://waf.io/book</p>
