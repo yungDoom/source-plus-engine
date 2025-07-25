@@ -1,0 +1,3 @@
+[submodule "source-plus-mod-content"]
+	path = hl2mp
+	url = https://github.com/yungDoom/source-plus-mod-content
