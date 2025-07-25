@@ -108,10 +108,6 @@ void ConnectTier3Libraries( CreateInterfaceFn *pFactoryList, int nFactoryCount )
 		{
 			g_pMDLCache = mdlcache = (IMDLCache*)pFactoryList[i]( MDLCACHE_INTERFACE_VERSION, NULL );
 		}
-		if ( !g_pVideo )
-		{
-		//	g_pVideo = (IVideoServices *)pFactoryList[i](VIDEO_SERVICES_INTERFACE_VERSION, NULL);
-		}
 		if ( !g_pDmeMakefileUtils )
 		{
 			g_pDmeMakefileUtils = (IDmeMakefileUtils*)pFactoryList[i]( DMEMAKEFILE_UTILS_INTERFACE_VERSION, NULL );
