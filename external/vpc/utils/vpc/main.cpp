@@ -75,7 +75,7 @@ CVPC::CVPC()
 	}
 
 #ifdef WIN32
-	m_eVSVersion = k_EVSVersion_2019;
+	m_eVSVersion = k_EVSVersion_2022;
 	m_bUseVS2010FileFormat = true;
 	m_bUseUnity = false;
 #else
@@ -625,6 +625,7 @@ void CVPC::SpewUsage( void )
 #endif
 			Log_Msg( LOG_VPC, "[/mirror]:     <path> - Mirror output files to specified path. Used for A:B testing.\n" );
 			Log_Msg( LOG_VPC, "[/2019]:       Generate projects and solutions for Visual Studio 2019 [default]\n" );
+			Log_Msg(LOG_VPC, "[/2022]:       Generate projects and solutions for Visual Studio 2022 [default]\n");
 			Log_Msg( LOG_VPC, "[/2015]:       Generate projects and solutions for Visual Studio 2015\n" );
 			Log_Msg( LOG_VPC, "[/2013]:       Generate projects and solutions for Visual Studio 2013\n" );
 			Log_Msg( LOG_VPC, "[/2012]:       Generate projects and solutions for Visual Studio 2012\n" );
@@ -999,6 +1000,11 @@ void CVPC::HandleSingleCommandLineArg( const char *pArg )
 			m_eVSVersion = k_EVSVersion_2019;
 			m_ExtraOptionsCRCString += pArgName;
 		}
+		else if (!V_stricmp(pArgName, "2022"))
+		{
+			m_eVSVersion = k_EVSVersion_2022;
+			m_ExtraOptionsCRCString += pArgName;
+			}
 		else if ( !V_stricmp( pArgName, "nounity" ) )
 		{
 			m_bUseUnity = false;
@@ -1820,6 +1826,16 @@ void CVPC::SetMacrosAndConditionals()
 		// VS2010 is strictly win32/xbox360
 		switch ( m_eVSVersion )
 		{
+		case k_EVSVersion_2022:
+			m_ExtraOptionsCRCString += "VS2022";
+			SetConditional("VS2022", true);
+
+			// temporarily allow VS2013 conditionals also as there are many. Will fix.
+			SetConditional("VS2013", true);
+
+			m_bUseVS2010FileFormat = true;
+			break;
+
 		case k_EVSVersion_2019:
 			m_ExtraOptionsCRCString += "VS2019";
 			SetConditional( "VS2019", true );
@@ -2367,6 +2383,8 @@ void CVPC::SetupGenerators()
 		{
 			// spew what we are generating
 			const char *pchLogLine = "Generating for Visual Studio 2005.\n";
+			if (m_eVSVersion == k_EVSVersion_2022)
+				pchLogLine = "Generating for Visual Studio 2022.\n";
 			if ( m_eVSVersion == k_EVSVersion_2019 )
 				pchLogLine = "Generating for Visual Studio 2019.\n";
 			else if ( m_eVSVersion == k_EVSVersion_2015 )

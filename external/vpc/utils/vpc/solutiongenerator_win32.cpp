@@ -27,7 +27,7 @@ class CSolutionGenerator_Win32 : public IBaseSolutionGenerator
 public:
 	void GetVCPROJSolutionGUID( char (&szSolutionGUID)[256] )
 	{
-		if ( g_pVPC->Is2019() )
+		if ( g_pVPC->Is2019() || g_pVPC->Is2022() )
 		{
 			V_strncpy( szSolutionGUID, "{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}", ARRAYSIZE(szSolutionGUID) );
 			return;
@@ -119,8 +119,14 @@ public:
 		if ( !fp )
 			g_pVPC->VPCError( "Can't open %s for writing.", pSolutionFilename );
 
-		
-		if ( g_pVPC->Is2019() )
+		if (g_pVPC->Is2022())
+		{
+			fprintf(fp, "\xef\xbb\xbf\nMicrosoft Visual Studio Solution File, Format Version 12.00\n");
+			fprintf(fp, "# Visual Studio Version 17\n");
+			fprintf(fp, "VisualStudioVersion = 17.0.31903.59\n");
+			fprintf(fp, "MinimumVisualStudioVersion = 10.0.40219.1\n");
+		}
+		else if ( g_pVPC->Is2019() )
 		{
 			fprintf( fp, "\xef\xbb\xbf\nMicrosoft Visual Studio Solution File, Format Version 12.00\n" );
 			fprintf( fp, "# Visual Studio Version 16\n" );
