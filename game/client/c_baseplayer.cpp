@@ -1884,6 +1884,7 @@ void C_BasePlayer::ThirdPersonSwitch( bool bThirdperson )
 //-----------------------------------------------------------------------------
 /*static*/ bool C_BasePlayer::ShouldDrawLocalPlayer()
 {
+	/*
 	if ( !UseVR() )
 	{
 		return !LocalPlayerInFirstPersonView() || cl_first_person_uses_world_model.GetBool();
@@ -1891,6 +1892,9 @@ void C_BasePlayer::ThirdPersonSwitch( bool bThirdperson )
 
 	static ConVarRef vr_first_person_uses_world_model( "vr_first_person_uses_world_model" );
 	return !LocalPlayerInFirstPersonView() || vr_first_person_uses_world_model.GetBool();
+	*/
+	
+	return true;
 }
 
 
@@ -1940,7 +1944,7 @@ bool C_BasePlayer::ShouldDrawThisPlayer()
 			return true;
 		}
 	}
-	return false;
+	return true;
 }
 
 
