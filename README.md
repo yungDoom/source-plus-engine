@@ -1,5 +1,6 @@
 # Source (+) Engine
 
+Refined version of [source-engine](https://github.com/nillerusr/source-engine) repository.<br>
 This project is using waf buildsystem. If you have waf-related questions look https://waf.io/book
 
 ## How to Build
