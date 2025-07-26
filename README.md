@@ -79,3 +79,7 @@ portal = Portal
 **Make sure to use them while building and not configuring.**
 
 ``-v`` = Verbose
+
+## Miscellaneous
+
+You can type ``./waf | .\waf.bat msvs`` in order to generate VS Solution. 
