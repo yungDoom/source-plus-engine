@@ -51,13 +51,12 @@ game/client/*/client.lib
 game/server/*/server.lib
 deprecated/
 
-# Mod/custom content
-hl2mp/
-hl1/
-hl2/
-episodic/
-dod/
-portal/
-tf2/
-cstrike/
+# Game Folders
+/hl2mp/
+/hl1/
+/hl2/
+/episodic/
+/dod/
+/portal/
+/cstrike/
 
